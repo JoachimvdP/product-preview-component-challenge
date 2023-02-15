@@ -1,0 +1,155 @@
+:root {
+  --primary-cream: hsl(30, 37%, 92%);
+  --primary-cyan: hsl(158, 36%, 37%);
+  --dark-cyan: hsl(158, 25%, 25%);
+  --dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-cream);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  max-width: 534px;
+  flex-direction: row;
+  margin: 0 0 20px 0;
+}
+
+.product-image {
+ flex-basis: 267px;
+ display: flex;
+ max-height: 400px;
+}
+
+.image {
+  border-radius: 15px 0 0 15px;
+  object-fit: cover;
+  height: auto;
+  max-width: 100%;
+}
+
+.mobile {
+  display: none;
+}
+
+.description {
+  flex-basis: 267px;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background-color: var(--white);
+  border-radius: 0 15px 15px 0;
+}
+
+.product-category {
+  letter-spacing: 0.2rem;
+  color: var(--dark-grayish-blue);
+  font-size: 13px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  margin: 0 0 20px 0;
+}
+
+p {
+  color: var(--dark-grayish-blue);
+  font-size: 13px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  line-height: 20px;
+  margin: 0;
+}
+
+.product-name {
+  font-family: Fraunces, cursive;
+  color: var(--dark-blue);
+  font-size: 30px;
+  margin: 0 0 25px 0;
+  line-height: 30px;
+}
+
+.price {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 1.8rem 0 1.8rem 0;
+}
+
+.new-price {
+  color: var(--primary-cyan);
+  font-family: Fraunces, cursive;
+  font-size: 30px;
+  margin: 0;
+}
+
+.old-price {
+  font-size: 13px;
+  margin: 0;
+  text-decoration: line-through;
+}
+
+button {
+  background-color: var(--primary-cyan);
+  border-style: none;
+  border-radius: 10px;
+  height: 2.5rem;
+  max-width: 100%;
+  font-family: Montserrat, sans-serif;
+  color: var(--white);
+}
+
+.add-to-cart img {
+  transform: translate(-10px, 2px);
+}
+
+button:hover {
+  background-color: var(--dark-cyan);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 560px) {
+  .container {
+    flex-direction: column;
+    max-width: 350px;
+  }
+  .description {
+      border-radius: 0 0 15px 15px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .image {
+    border-radius: 15px 15px 0 0;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  font-family: Montserrat, sans-serif;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
